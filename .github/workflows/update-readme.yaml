@@ -1,0 +1,28 @@
+name: Update Readme
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+  workflow_dispatch:
+env:
+  JASHN_GH_PCT: ${{secrets.JASHN_GH_PCT}}
+jobs:
+  get-gh-commits:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Running node server
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.17.4
+      - run: yarn
+      - run: node index.js
+      - name: Commit and push if changed
+        run: |
+          git diff
+          git config --global user.email "actions@users.noreply.github.com"
+          git config --global user.name "README-bot"
+          git add .
+          git commit -m "Updated trees 🌳" || exit 0
+          git push
