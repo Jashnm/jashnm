@@ -8,5 +8,5 @@ Currently giving purpose to my life at [Now&Me](https://nowandme.com)
 - I aim to diminish mental health related issues around the world
 - Big time nature lover, and so this pledge of planting trees equaling github commits I make in a year
 
-Committed trees(2022): 4  
- 🌳🌳🌳🌳
+Committed trees(2022): 6  
+ 🌳🌳🌳🌳🌳🌳
